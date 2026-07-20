@@ -10,7 +10,7 @@
         :root {
             --fondo-oscuro: #0f0f0f;
             --fondo-tarjeta: #181818;
-            --verde-lima: #bfff00; 
+            --verde-lima: #bfff00; /* Color neón de tu logo */
             --verde-hover: #a6df00;
             --blanco: #ffffff;
             --gris-texto: #aaaaaa;
@@ -38,7 +38,7 @@
             width: 100%;
             max-width: 450px;
             text-align: center;
-            padding-bottom: 40px;
+            padding-bottom: 20px; /* Reducido para acercar el footer */
         }
 
         /* Sección de Perfil / Logo */
@@ -96,6 +96,9 @@
             border-radius: 20px;
             margin-bottom: 25px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         .info-card p {
@@ -106,40 +109,46 @@
             font-weight: 400;
         }
 
-        /* Contenedor de Botones Redondeados Especiales */
-        .categories-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 8px;
+        /* Contenedor de Etiquetas Burbuja (Pill Tags) */
+        .categories-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            width: 100%;
         }
 
-        .category-box {
+        .pill-tag {
+            background-color: transparent;
             border: 1.5px solid var(--verde-lima);
-            border-radius: 18px;
-            padding: 10px 4px;
+            border-radius: 30px; /* Forma de burbuja alargada */
+            padding: 10px 18px;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            background: transparent;
+            flex: 1 1 calc(33.33% - 10px); /* Ocupa un tercio aprox. */
+            min-width: 120px;
+            margin-bottom: 5px;
         }
 
-        .category-box .icons-row {
+        .pill-tag .icons-row {
             display: flex;
             gap: 6px;
             margin-bottom: 6px;
         }
 
-        .category-box i {
+        .pill-tag i {
             font-size: 1.1rem;
             color: var(--verde-lima);
         }
 
-        .category-box span {
+        .pill-tag span {
             font-size: 0.68rem;
             font-weight: 700;
             color: var(--verde-lima);
             line-height: 1.2;
+            text-align: center;
         }
 
         /* Lista de Enlaces de Redes */
@@ -148,6 +157,7 @@
             flex-direction: column;
             gap: 14px;
             width: 100%;
+            margin-bottom: 20px; /* Espacio antes del footer */
         }
 
         .btn-link {
@@ -178,7 +188,7 @@
             padding-right: 20px;
         }
 
-        /* Botón de WhatsApp Destacado según Diseño */
+        /* Botón de WhatsApp Destacado */
         .btn-whatsapp {
             background-color: var(--verde-lima);
             color: #000000;
@@ -194,6 +204,20 @@
         /* Efecto Hover sutil */
         .btn-link:active, .btn-link:hover {
             opacity: 0.9;
+        }
+
+        /* Pie de página (Footer) */
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+            width: 100%;
+        }
+
+        .footer-text {
+            font-size: 0.8rem;
+            color: var(--gris-texto);
+            font-weight: 400;
+            letter-spacing: 0.5px;
         }
     </style>
 </head>
@@ -214,11 +238,11 @@
         <div class="info-card">
             <p>Conectamos contigo a través de lo último en innovación, artículos exclusivos y tendencias globales seleccionadas para transformar tu día a día.</p>
             
-            <!-- Los 3 bloques interactivos redondeados -->
-            <div class="categories-grid">
+            <!-- Contenedor de Etiquetas Burbuja (Pill Tags) -->
+            <div class="categories-container">
                 
-                <!-- Bloque 1: Zona Deportiva -->
-                <div class="category-box">
+                <!-- Burbuja 1: Zona Deportiva -->
+                <div class="pill-tag">
                     <div class="icons-row">
                         <i class="fa-solid fa-volleyball"></i>
                         <i class="fa-solid fa-soccer-ball"></i>
@@ -226,8 +250,8 @@
                     <span>Zona Deportiva<br>/ Fitness</span>
                 </div>
 
-                <!-- Bloque 2: Gadgets -->
-                <div class="category-box">
+                <!-- Burbuja 2: Gadgets -->
+                <div class="pill-tag">
                     <div class="icons-row">
                         <i class="fa-solid fa-usb"></i>
                         <i class="fa-solid fa-microchip"></i>
@@ -235,8 +259,8 @@
                     <span>Gadgets &<br>Innovación</span>
                 </div>
 
-                <!-- Bloque 3: Tendencias -->
-                <div class="category-box">
+                <!-- Burbuja 3: Tendencias -->
+                <div class="pill-tag">
                     <div class="icons-row">
                         <i class="fa-solid fa-lightbulb"></i>
                     </div>
@@ -246,7 +270,7 @@
             </div>
         </div>
 
-        <!-- Enlaces a tus Redes con tus textos exactos -->
+        <!-- Enlaces a tus Redes -->
         <div class="links-container">
             
             <!-- WhatsApp -->
@@ -275,8 +299,13 @@
 
         </div>
 
+        <!-- Pie de página (Footer) -->
+        <div class="footer">
+            <p class="footer-text">⚡ PACKO.WEB | Santa Cruz - Bolivia 🇧🇴</p>
+        </div>
+
     </div>
 
 </body>
 </html>
- 
+      
