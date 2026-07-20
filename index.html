@@ -3,17 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PACKO.WEB - Importaciones Deportivas y Tecnológicas</title>
+    <title>PACKO.WEB - Tendencias e Innovación</title>
     <!-- Iconos globales de FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --fondo-oscuro: #121212;
-            --fondo-tarjeta: #1e1e1e;
-            --verde-lima: #bfff00; /* Color idéntico al neón de tu logo */
+            --fondo-oscuro: #0f0f0f;
+            --fondo-tarjeta: #181818;
+            --verde-lima: #bfff00; 
             --verde-hover: #a6df00;
             --blanco: #ffffff;
             --gris-texto: #aaaaaa;
+            --gris-suave: #dddddd;
         }
 
         * {
@@ -35,25 +36,25 @@
 
         .container {
             width: 100%;
-            max-width: 480px;
+            max-width: 450px;
             text-align: center;
             padding-bottom: 40px;
         }
 
         /* Sección de Perfil / Logo */
         .header {
-            margin-top: 25px;
-            margin-bottom: 25px;
+            margin-top: 20px;
+            margin-bottom: 20px;
         }
 
         .logo-container {
-            width: 120px;
-            height: 120px;
+            width: 125px;
+            height: 125px;
             margin: 0 auto 15px auto;
-            border: 3px solid var(--verde-lima);
+            border: 3.5px solid var(--verde-lima);
             border-radius: 50%;
             overflow: hidden;
-            box-shadow: 0 8px 25px rgba(191, 255, 0, 0.25);
+            box-shadow: 0 8px 25px rgba(191, 255, 0, 0.2);
             background-color: #000000;
             display: flex;
             align-items: center;
@@ -67,7 +68,7 @@
         }
 
         h1 {
-            font-size: 1.8rem;
+            font-size: 1.9rem;
             font-weight: 900;
             letter-spacing: 1.5px;
             color: var(--blanco);
@@ -79,56 +80,73 @@
         }
 
         .slogan {
-            font-size: 0.95rem;
+            font-size: 1.1rem;
             color: var(--gris-texto);
-            margin-top: 6px;
-            font-weight: 500;
-            letter-spacing: 0.5px;
+            margin-top: 8px;
+            font-weight: 600;
+            line-height: 1.3;
+            padding: 0 15px;
         }
 
-        /* Bloque Informativo de Categorías */
+        /* Bloque Informativo Central */
         .info-card {
             background-color: var(--fondo-tarjeta);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            padding: 18px;
-            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            padding: 22px 18px;
+            border-radius: 20px;
             margin-bottom: 25px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
         }
 
         .info-card p {
             font-size: 0.95rem;
             line-height: 1.5;
-            color: #dddddd;
-            margin-bottom: 12px;
+            color: var(--gris-suave);
+            margin-bottom: 20px;
+            font-weight: 400;
         }
 
-        /* Etiquetas de lo que importas */
-        .tags-container {
-            display: flex;
-            justify-content: center;
+        /* Contenedor de Botones Redondeados Especiales */
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
             gap: 8px;
-            flex-wrap: wrap;
         }
 
-        .tag {
-            background: rgba(191, 255, 0, 0.1);
-            color: var(--verde-lima);
-            padding: 6px 12px;
-            border-radius: 20px;
-            font-size: 0.75rem;
-            font-weight: 700;
-            border: 1px solid rgba(191, 255, 0, 0.2);
+        .category-box {
+            border: 1.5px solid var(--verde-lima);
+            border-radius: 18px;
+            padding: 10px 4px;
             display: flex;
+            flex-direction: column;
             align-items: center;
-            gap: 5px;
+            justify-content: center;
+            background: transparent;
         }
 
-        /* Lista de Enlaces Directos */
+        .category-box .icons-row {
+            display: flex;
+            gap: 6px;
+            margin-bottom: 6px;
+        }
+
+        .category-box i {
+            font-size: 1.1rem;
+            color: var(--verde-lima);
+        }
+
+        .category-box span {
+            font-size: 0.68rem;
+            font-weight: 700;
+            color: var(--verde-lima);
+            line-height: 1.2;
+        }
+
+        /* Lista de Enlaces de Redes */
         .links-container {
             display: flex;
             flex-direction: column;
-            gap: 16px;
+            gap: 14px;
             width: 100%;
         }
 
@@ -137,55 +155,45 @@
             align-items: center;
             background-color: var(--fondo-tarjeta);
             color: var(--blanco);
-            padding: 16px 24px;
-            border-radius: 12px;
+            padding: 16px 20px;
+            border-radius: 14px;
             text-decoration: none;
             font-weight: 700;
-            font-size: 1.05rem;
-            transition: all 0.3s ease;
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            font-size: 1.1rem;
+            transition: all 0.25s ease;
+            border: 1px solid rgba(255, 255, 255, 0.05);
             position: relative;
         }
 
         .btn-link i {
-            font-size: 1.3rem;
+            font-size: 1.35rem;
             position: absolute;
-            left: 24px;
+            left: 22px;
         }
 
         .btn-link span {
             width: 100%;
             text-align: center;
+            padding-left: 20px;
+            padding-right: 20px;
         }
 
-        /* Efectos Visuales Modernos */
-        .btn-link:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(191, 255, 0, 0.15);
-            border-color: var(--verde-lima);
-            color: var(--verde-lima);
-        }
-
-        /* Botón de WhatsApp Destacado */
-        .btn-highlight {
+        /* Botón de WhatsApp Destacado según Diseño */
+        .btn-whatsapp {
             background-color: var(--verde-lima);
             color: #000000;
             border: none;
+            padding: 14px 20px;
         }
 
-        .btn-highlight:hover {
-            background-color: var(--verde-hover);
-            color: #000000;
-            box-shadow: 0 8px 25px rgba(191, 255, 0, 0.4);
+        .btn-whatsapp span {
+            font-weight: 800;
+            line-height: 1.3;
         }
 
-        /* Pie de página */
-        .footer {
-            margin-top: 40px;
-            font-size: 0.8rem;
-            color: var(--gris-texto);
-            letter-spacing: 0.5px;
+        /* Efecto Hover sutil */
+        .btn-link:active, .btn-link:hover {
+            opacity: 0.9;
         }
     </style>
 </head>
@@ -193,62 +201,82 @@
 
     <div class="container">
         
-        <!-- Encabezado con tu Logo Oficial -->
+        <!-- Encabezado con tu Logo -->
         <div class="header">
             <div class="logo-container">
-                <!-- Foto cargada correctamente -->
                 <img src="IMG-20260719-WA0004.jpg" alt="Logo PACKO.WEB">
             </div>
             <h1>PACKO<span>.WEB</span></h1>
-            <div class="slogan">Importaciones Directas & Productos Innovadores</div>
+            <div class="slogan">Tu dosis diaria de tendencias e innovación.</div>
         </div>
 
-        <!-- Tarjeta de Presentación del Negocio -->
+        <!-- Tarjeta Central de Contenido -->
         <div class="info-card">
-            <p>Tu tienda de confianza para artículos deportivos premium, gadgets modernos para el hogar y tecnología innovadora al mejor precio del mercado.</p>
+            <p>Conectamos contigo a través de lo último en innovación, artículos exclusivos y tendencias globales seleccionadas para transformar tu día a día.</p>
             
-            <div class="tags-container">
-                <span class="tag"><i class="fa-solid fa-volleyball"></i> Accesorios de Voley</span>
-                <span class="tag"><i class="fa-solid fa-bottle-water"></i> Tomatodos</span>
-                <span class="tag"><i class="fa-solid fa-lightbulb"></i> Luces LED & Hogar</span>
+            <!-- Los 3 bloques interactivos redondeados -->
+            <div class="categories-grid">
+                
+                <!-- Bloque 1: Zona Deportiva -->
+                <div class="category-box">
+                    <div class="icons-row">
+                        <i class="fa-solid fa-volleyball"></i>
+                        <i class="fa-solid fa-soccer-ball"></i>
+                    </div>
+                    <span>Zona Deportiva<br>/ Fitness</span>
+                </div>
+
+                <!-- Bloque 2: Gadgets -->
+                <div class="category-box">
+                    <div class="icons-row">
+                        <i class="fa-solid fa-usb"></i>
+                        <i class="fa-solid fa-microchip"></i>
+                    </div>
+                    <span>Gadgets &<br>Innovación</span>
+                </div>
+
+                <!-- Bloque 3: Tendencias -->
+                <div class="category-box">
+                    <div class="icons-row">
+                        <i class="fa-solid fa-lightbulb"></i>
+                    </div>
+                    <span>Tendencias<br>Inteligentes</span>
+                </div>
+
             </div>
         </div>
 
-        <!-- Contenedor Interactivo de Enlaces Reales -->
+        <!-- Enlaces a tus Redes con tus textos exactos -->
         <div class="links-container">
             
-            <!-- WhatsApp con tu link de siempre -->
-            <a href="https://wa.link/al5e4h" target="_blank" class="btn-link btn-highlight">
+            <!-- WhatsApp -->
+            <a href="https://wa.link/al5e4h" target="_blank" class="btn-link btn-whatsapp">
                 <i class="fa-brands fa-whatsapp"></i>
-                <span>Pedidos e Importaciones Directas</span>
+                <span>Chatea con nosotros y pide aquí</span>
             </a>
 
-            <!-- Tu nuevo TikTok -->
+            <!-- TikTok -->
             <a href="https://www.tiktok.com/@packo.web?_r=1&_t=ZS-989ThdauoYm" target="_blank" class="btn-link">
                 <i class="fa-brands fa-tiktok"></i>
-                <span>Síguenos en TikTok</span>
+                <span>síguenos en tiktok</span>
             </a>
 
-            <!-- Tu nuevo Instagram -->
+            <!-- Instagram -->
             <a href="https://www.instagram.com/packo.web?igsh=MTAxYXZuMzRoYnJ5dQ==" target="_blank" class="btn-link">
                 <i class="fa-brands fa-instagram"></i>
-                <span>Catálogo en Instagram</span>
+                <span>Estilo de vida en Instagram</span>
             </a>
 
-            <!-- Tu nuevo Facebook -->
+            <!-- Facebook -->
             <a href="https://www.facebook.com/profile.php?id=61592288451911" target="_blank" class="btn-link">
                 <i class="fa-brands fa-facebook"></i>
-                <span>Comunidad en Facebook</span>
+                <span>comunidad en Facebook</span>
             </a>
 
-        </div>
-
-        <!-- Pie de página de tu Empresa -->
-        <div class="footer">
-            <p>⚡ PACKO.WEB | Santa Cruz - Bolivia 🇧🇴</p>
         </div>
 
     </div>
 
 </body>
 </html>
+ 
